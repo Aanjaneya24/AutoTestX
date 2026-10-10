@@ -1,0 +1,6 @@
+INFO: compiling examples/counter_fail
+INFO: running simulation
+ASSERT FAIL: expected count 9, got 3 at time 46000
+FAIL: tb_counter_fail (intentional)
+FATAL: examples/counter_fail/tb.v:15: intentional assertion failure
+       Time: 46000  Scope: tb

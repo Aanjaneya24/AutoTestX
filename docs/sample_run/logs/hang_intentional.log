@@ -1,0 +1,5 @@
+INFO: compiling examples/hang
+INFO: running simulation
+INFO: hang test started; will never finish
+
+AUTOTESTX: TIMEOUT after 3s; process group killed

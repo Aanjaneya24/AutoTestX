@@ -1,0 +1,4 @@
+INFO: compiling examples/counter_reset
+INFO: running simulation
+PASS: tb_counter_reset completed
+examples/counter_reset/tb.v:23: $finish called at 96000 (1ps)

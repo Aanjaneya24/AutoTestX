@@ -1,0 +1,181 @@
+sample_id,log_text,label,source_type,family_id,notes
+S0001,"tb.v:5: syntax error
+tb.v:5: error: Malformed statement",compile_error,synthetic,compile_error-1,template-generated variant
+S0002,"tb.v:17: syntax error
+tb.v:17: error: Malformed statement",compile_error,synthetic,compile_error-1,template-generated variant
+S0003,"uart_tx.v:60: syntax error
+uart_tx.v:60: error: Malformed statement",compile_error,synthetic,compile_error-1,template-generated variant
+S0004,"top.sv:298: syntax error
+top.sv:298: error: Malformed statement",compile_error,synthetic,compile_error-1,template-generated variant
+S0005,"counter.v:337: error: Unknown module type: alu
+1 error(s) during elaboration.",compile_error,synthetic,compile_error-2,template-generated variant
+S0006,"counter.v:365: error: Unknown module type: arbiter
+1 error(s) during elaboration.",compile_error,synthetic,compile_error-2,template-generated variant
+S0007,"top.sv:112: error: Unknown module type: counter
+1 error(s) during elaboration.",compile_error,synthetic,compile_error-2,template-generated variant
+S0008,"fifo.v:143: error: Unknown module type: decoder
+1 error(s) during elaboration.",compile_error,synthetic,compile_error-2,template-generated variant
+S0009,tb.v:290: error: Unable to bind wire/reg/memory `count' in `tb.dut',compile_error,synthetic,compile_error-3,template-generated variant
+S0010,dut_wrapper.sv:420: error: Unable to bind wire/reg/memory `state' in `tb.dut',compile_error,synthetic,compile_error-3,template-generated variant
+S0011,dut_wrapper.sv:97: error: Unable to bind wire/reg/memory `state' in `tb.dut',compile_error,synthetic,compile_error-3,template-generated variant
+S0012,alu.v:57: error: Unable to bind wire/reg/memory `irq' in `tb.dut',compile_error,synthetic,compile_error-3,template-generated variant
+S0013,"ERROR: compilation failed
+I give up.",compile_error,synthetic,compile_error-4,template-generated variant
+S0014,"Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  ""uart_tx.v"", 137: token is ';'",compile_error,synthetic,compile_error-5,template-generated variant
+S0015,"Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  ""uart_tx.v"", 32: token is ';'",compile_error,synthetic,compile_error-5,template-generated variant
+S0016,"Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  ""fifo.v"", 325: token is ';'",compile_error,synthetic,compile_error-5,template-generated variant
+S0017,"Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  ""alu.v"", 444: token is ';'",compile_error,synthetic,compile_error-5,template-generated variant
+S0018,"%Error: tb.v:125:33: syntax error, unexpected IDENTIFIER, expecting ';'",compile_error,synthetic,compile_error-6,template-generated variant
+S0019,"%Error: counter.v:220:12: syntax error, unexpected IDENTIFIER, expecting ';'",compile_error,synthetic,compile_error-6,template-generated variant
+S0020,"%Error: fifo.v:340:24: syntax error, unexpected IDENTIFIER, expecting ';'",compile_error,synthetic,compile_error-6,template-generated variant
+S0021,"%Error: uart_tx.v:170:11: syntax error, unexpected IDENTIFIER, expecting ';'",compile_error,synthetic,compile_error-6,template-generated variant
+S0022,elaboration aborted: design unit 'uart_rx' could not be resolved in library work,compile_error,synthetic,compile_error-7,template-generated variant
+S0023,elaboration aborted: design unit 'counter' could not be resolved in library work,compile_error,synthetic,compile_error-7,template-generated variant
+S0024,elaboration aborted: design unit 'arbiter' could not be resolved in library work,compile_error,synthetic,compile_error-7,template-generated variant
+S0025,elaboration aborted: design unit 'alu' could not be resolved in library work,compile_error,synthetic,compile_error-7,template-generated variant
+S0026,"** Error: (counter.v) counter.v(398): near ""endmodule"": syntax error, unexpected endmodule",compile_error,synthetic,compile_error-8,template-generated variant
+S0027,"** Error: (dut_wrapper.sv) dut_wrapper.sv(328): near ""endmodule"": syntax error, unexpected endmodule",compile_error,synthetic,compile_error-8,template-generated variant
+S0028,"** Error: (dut_wrapper.sv) dut_wrapper.sv(34): near ""endmodule"": syntax error, unexpected endmodule",compile_error,synthetic,compile_error-8,template-generated variant
+S0029,"** Error: (tb.v) tb.v(161): near ""endmodule"": syntax error, unexpected endmodule",compile_error,synthetic,compile_error-8,template-generated variant
+S0030,"ASSERT FAIL: expected 2976, got 4716 at time 401162",assertion_failure,synthetic,assertion_failure-1,template-generated variant
+S0031,"ASSERT FAIL: expected 4815, got 2669 at time 478876",assertion_failure,synthetic,assertion_failure-1,template-generated variant
+S0032,"ASSERT FAIL: expected 1577, got 4871 at time 614656",assertion_failure,synthetic,assertion_failure-1,template-generated variant
+S0033,"ASSERT FAIL: expected 4971, got 2592 at time 189400",assertion_failure,synthetic,assertion_failure-1,template-generated variant
+S0034,[215698] Assertion violation: count stable property failed,assertion_failure,synthetic,assertion_failure-2,template-generated variant
+S0035,[521895] Assertion violation: data_out stable property failed,assertion_failure,synthetic,assertion_failure-2,template-generated variant
+S0036,[369551] Assertion violation: irq stable property failed,assertion_failure,synthetic,assertion_failure-2,template-generated variant
+S0037,[835590] Assertion violation: ack stable property failed,assertion_failure,synthetic,assertion_failure-2,template-generated variant
+S0038,"FAIL: regfile mismatch on ack: expected 0xd1, actual 0xed",assertion_failure,synthetic,assertion_failure-3,template-generated variant
+S0039,"FAIL: arbiter mismatch on addr: expected 0x92, actual 0x63",assertion_failure,synthetic,assertion_failure-3,template-generated variant
+S0040,"FAIL: regfile mismatch on irq: expected 0x7e, actual 0x28",assertion_failure,synthetic,assertion_failure-3,template-generated variant
+S0041,"FAIL: regfile mismatch on state: expected 0x92, actual 0x2d",assertion_failure,synthetic,assertion_failure-3,template-generated variant
+S0042,Error: scoreboard check failed at 237903ns: data compare 3110 != 477,assertion_failure,synthetic,assertion_failure-4,template-generated variant
+S0043,Error: scoreboard check failed at 358700ns: data compare 3108 != 4361,assertion_failure,synthetic,assertion_failure-4,template-generated variant
+S0044,Error: scoreboard check failed at 477507ns: data compare 2764 != 2203,assertion_failure,synthetic,assertion_failure-4,template-generated variant
+S0045,Error: scoreboard check failed at 577604ns: data compare 2444 != 4782,assertion_failure,synthetic,assertion_failure-4,template-generated variant
+S0046,UVM_ERROR @ 328521: reporter [CHK] output addr did not match reference model value 1720,assertion_failure,synthetic,assertion_failure-5,template-generated variant
+S0047,UVM_ERROR @ 387718: reporter [CHK] output ready did not match reference model value 2308,assertion_failure,synthetic,assertion_failure-5,template-generated variant
+S0048,UVM_ERROR @ 32189: reporter [CHK] output ack did not match reference model value 1189,assertion_failure,synthetic,assertion_failure-5,template-generated variant
+S0049,UVM_ERROR @ 769575: reporter [CHK] output data_out did not match reference model value 791,assertion_failure,synthetic,assertion_failure-5,template-generated variant
+S0050,"assert property (irq) failed
+  at fifo.v:438",assertion_failure,synthetic,assertion_failure-6,template-generated variant
+S0051,"assert property (count) failed
+  at uart_tx.v:431",assertion_failure,synthetic,assertion_failure-6,template-generated variant
+S0052,"assert property (addr) failed
+  at top.sv:51",assertion_failure,synthetic,assertion_failure-6,template-generated variant
+S0053,"assert property (valid) failed
+  at fifo.v:41",assertion_failure,synthetic,assertion_failure-6,template-generated variant
+S0054,$fatal: tb check at tb.v:376: counter value 3842 violated invariant count,assertion_failure,synthetic,assertion_failure-7,template-generated variant
+S0055,$fatal: tb check at dut_wrapper.sv:393: counter value 4789 violated invariant ready,assertion_failure,synthetic,assertion_failure-7,template-generated variant
+S0056,$fatal: tb check at counter.v:400: counter value 606 violated invariant ready,assertion_failure,synthetic,assertion_failure-7,template-generated variant
+S0057,$fatal: tb check at tb.v:79: counter value 3990 violated invariant addr,assertion_failure,synthetic,assertion_failure-7,template-generated variant
+S0058,TEST FAILED: valid was 1166 but should have been 2955 after reset,assertion_failure,synthetic,assertion_failure-8,template-generated variant
+S0059,TEST FAILED: irq was 2991 but should have been 3863 after reset,assertion_failure,synthetic,assertion_failure-8,template-generated variant
+S0060,TEST FAILED: ready was 2445 but should have been 847 after reset,assertion_failure,synthetic,assertion_failure-8,template-generated variant
+S0061,TEST FAILED: ready was 2053 but should have been 452 after reset,assertion_failure,synthetic,assertion_failure-8,template-generated variant
+S0062,AUTOTESTX: TIMEOUT after 4623s; process group killed,timeout,synthetic,timeout-1,template-generated variant
+S0063,AUTOTESTX: TIMEOUT after 3991s; process group killed,timeout,synthetic,timeout-1,template-generated variant
+S0064,AUTOTESTX: TIMEOUT after 2723s; process group killed,timeout,synthetic,timeout-1,template-generated variant
+S0065,AUTOTESTX: TIMEOUT after 4782s; process group killed,timeout,synthetic,timeout-1,template-generated variant
+S0066,Simulation timed out after 814968 ns without reaching $finish,timeout,synthetic,timeout-2,template-generated variant
+S0067,Simulation timed out after 691657 ns without reaching $finish,timeout,synthetic,timeout-2,template-generated variant
+S0068,Simulation timed out after 775641 ns without reaching $finish,timeout,synthetic,timeout-2,template-generated variant
+S0069,Simulation timed out after 717251 ns without reaching $finish,timeout,synthetic,timeout-2,template-generated variant
+S0070,ERROR: watchdog expired at 567395: testbench did not complete,timeout,synthetic,timeout-3,template-generated variant
+S0071,ERROR: watchdog expired at 328302: testbench did not complete,timeout,synthetic,timeout-3,template-generated variant
+S0072,ERROR: watchdog expired at 560629: testbench did not complete,timeout,synthetic,timeout-3,template-generated variant
+S0073,ERROR: watchdog expired at 238113: testbench did not complete,timeout,synthetic,timeout-3,template-generated variant
+S0074,no progress for 4354 seconds; killing simulation,timeout,synthetic,timeout-4,template-generated variant
+S0075,no progress for 3914 seconds; killing simulation,timeout,synthetic,timeout-4,template-generated variant
+S0076,no progress for 706 seconds; killing simulation,timeout,synthetic,timeout-4,template-generated variant
+S0077,no progress for 353 seconds; killing simulation,timeout,synthetic,timeout-4,template-generated variant
+S0078,Test exceeded maximum run time of 435s,timeout,synthetic,timeout-5,template-generated variant
+S0079,Test exceeded maximum run time of 3863s,timeout,synthetic,timeout-5,template-generated variant
+S0080,Test exceeded maximum run time of 3912s,timeout,synthetic,timeout-5,template-generated variant
+S0081,Test exceeded maximum run time of 2026s,timeout,synthetic,timeout-5,template-generated variant
+S0082,TIMEOUT waiting for signal irq to assert (limit 404494 ns),timeout,synthetic,timeout-6,template-generated variant
+S0083,TIMEOUT waiting for signal data_out to assert (limit 144504 ns),timeout,synthetic,timeout-6,template-generated variant
+S0084,TIMEOUT waiting for signal valid to assert (limit 34961 ns),timeout,synthetic,timeout-6,template-generated variant
+S0085,TIMEOUT waiting for signal addr to assert (limit 177530 ns),timeout,synthetic,timeout-6,template-generated variant
+S0086,The simulation did not terminate within the allotted 3708 seconds,timeout,synthetic,timeout-7,template-generated variant
+S0087,The simulation did not terminate within the allotted 1427 seconds,timeout,synthetic,timeout-7,template-generated variant
+S0088,The simulation did not terminate within the allotted 4145 seconds,timeout,synthetic,timeout-7,template-generated variant
+S0089,The simulation did not terminate within the allotted 3074 seconds,timeout,synthetic,timeout-7,template-generated variant
+S0090,Time-out: handshake on state never completed,timeout,synthetic,timeout-8,template-generated variant
+S0091,Time-out: handshake on count never completed,timeout,synthetic,timeout-8,template-generated variant
+S0092,Time-out: handshake on addr never completed,timeout,synthetic,timeout-8,template-generated variant
+S0093,Time-out: handshake on ack never completed,timeout,synthetic,timeout-8,template-generated variant
+S0094,"FATAL: alu.v:452: index out of bounds
+       Time: 340493  Scope: tb.data_out",runtime_error,synthetic,runtime_error-1,template-generated variant
+S0095,"FATAL: tb.v:307: index out of bounds
+       Time: 287687  Scope: tb.valid",runtime_error,synthetic,runtime_error-1,template-generated variant
+S0096,"FATAL: top.sv:90: index out of bounds
+       Time: 268433  Scope: tb.count",runtime_error,synthetic,runtime_error-1,template-generated variant
+S0097,"FATAL: uart_tx.v:291: index out of bounds
+       Time: 375705  Scope: tb.count",runtime_error,synthetic,runtime_error-1,template-generated variant
+S0098,Segmentation fault (core dumped),runtime_error,synthetic,runtime_error-2,template-generated variant
+S0099,vvp: fifo.v:451: out of memory allocating 3924 bytes,runtime_error,synthetic,runtime_error-3,template-generated variant
+S0100,vvp: uart_tx.v:458: out of memory allocating 348 bytes,runtime_error,synthetic,runtime_error-3,template-generated variant
+S0101,vvp: uart_tx.v:421: out of memory allocating 2415 bytes,runtime_error,synthetic,runtime_error-3,template-generated variant
+S0102,vvp: uart_tx.v:424: out of memory allocating 4827 bytes,runtime_error,synthetic,runtime_error-3,template-generated variant
+S0103,Runtime error: division by zero in counter at 237597,runtime_error,synthetic,runtime_error-4,template-generated variant
+S0104,Runtime error: division by zero in uart_rx at 347846,runtime_error,synthetic,runtime_error-4,template-generated variant
+S0105,Runtime error: division by zero in fifo_ctrl at 696801,runtime_error,synthetic,runtime_error-4,template-generated variant
+S0106,Runtime error: division by zero in decoder at 521287,runtime_error,synthetic,runtime_error-4,template-generated variant
+S0107,Floating point exception while evaluating ready,runtime_error,synthetic,runtime_error-5,template-generated variant
+S0108,Floating point exception while evaluating state,runtime_error,synthetic,runtime_error-5,template-generated variant
+S0109,Floating point exception while evaluating ack,runtime_error,synthetic,runtime_error-5,template-generated variant
+S0110,Floating point exception while evaluating data_out,runtime_error,synthetic,runtime_error-5,template-generated variant
+S0111,Process terminated by signal SIGABRT,runtime_error,synthetic,runtime_error-6,template-generated variant
+S0112,Process terminated by signal SIGBUS,runtime_error,synthetic,runtime_error-6,template-generated variant
+S0113,Process terminated by signal SIGKILL,runtime_error,synthetic,runtime_error-6,template-generated variant
+S0114,Process terminated by signal SIGSEGV,runtime_error,synthetic,runtime_error-6,template-generated variant
+S0115,Array index 4751 out of range for ack[4050:0] at time 179643,runtime_error,synthetic,runtime_error-7,template-generated variant
+S0116,Array index 1750 out of range for state[3703:0] at time 866535,runtime_error,synthetic,runtime_error-7,template-generated variant
+S0117,Array index 3292 out of range for data_out[4432:0] at time 131245,runtime_error,synthetic,runtime_error-7,template-generated variant
+S0118,Array index 2039 out of range for state[2408:0] at time 463329,runtime_error,synthetic,runtime_error-7,template-generated variant
+S0119,Stack overflow in recursive function data_out (depth 4770),runtime_error,synthetic,runtime_error-8,template-generated variant
+S0120,Stack overflow in recursive function ready (depth 2976),runtime_error,synthetic,runtime_error-8,template-generated variant
+S0121,Stack overflow in recursive function state (depth 1633),runtime_error,synthetic,runtime_error-8,template-generated variant
+S0122,Stack overflow in recursive function valid (depth 123),runtime_error,synthetic,runtime_error-8,template-generated variant
+S0123,WARNING: license server response slow (2897 ms),unknown,synthetic,unknown-1,template-generated variant
+S0124,WARNING: license server response slow (4390 ms),unknown,synthetic,unknown-1,template-generated variant
+S0125,WARNING: license server response slow (4293 ms),unknown,synthetic,unknown-1,template-generated variant
+S0126,WARNING: license server response slow (2764 ms),unknown,synthetic,unknown-1,template-generated variant
+S0127,Unexpected output format from wrapper script near line 368,unknown,synthetic,unknown-2,template-generated variant
+S0128,Unexpected output format from wrapper script near line 412,unknown,synthetic,unknown-2,template-generated variant
+S0129,Unexpected output format from wrapper script near line 82,unknown,synthetic,unknown-2,template-generated variant
+S0130,Unexpected output format from wrapper script near line 165,unknown,synthetic,unknown-2,template-generated variant
+S0131,exit status 245 with no diagnostic message,unknown,synthetic,unknown-3,template-generated variant
+S0132,exit status 3657 with no diagnostic message,unknown,synthetic,unknown-3,template-generated variant
+S0133,exit status 955 with no diagnostic message,unknown,synthetic,unknown-3,template-generated variant
+S0134,exit status 4395 with no diagnostic message,unknown,synthetic,unknown-3,template-generated variant
+S0135,something went wrong while preparing state,unknown,synthetic,unknown-4,template-generated variant
+S0136,something went wrong while preparing ready,unknown,synthetic,unknown-4,template-generated variant
+S0137,something went wrong while preparing ack,unknown,synthetic,unknown-4,template-generated variant
+S0138,something went wrong while preparing irq,unknown,synthetic,unknown-4,template-generated variant
+S0139,Operation did not succeed; reason not provided,unknown,synthetic,unknown-5,template-generated variant
+S0140,"Warning: deprecated option -legacy ignored
+simulation ended",unknown,synthetic,unknown-6,template-generated variant
+S0141,"Warning: deprecated option -trace ignored
+simulation ended",unknown,synthetic,unknown-6,template-generated variant
+S0142,"Warning: deprecated option -fast ignored
+simulation ended",unknown,synthetic,unknown-6,template-generated variant
+S0143,"Warning: deprecated option -x ignored
+simulation ended",unknown,synthetic,unknown-6,template-generated variant
+S0144,Cannot determine cause; log truncated after 1444 lines,unknown,synthetic,unknown-7,template-generated variant
+S0145,Cannot determine cause; log truncated after 4941 lines,unknown,synthetic,unknown-7,template-generated variant
+S0146,Cannot determine cause; log truncated after 602 lines,unknown,synthetic,unknown-7,template-generated variant
+S0147,Cannot determine cause; log truncated after 1248 lines,unknown,synthetic,unknown-7,template-generated variant
+S0148,INFO: cleanup of alu.v skipped,unknown,synthetic,unknown-8,template-generated variant
+S0149,INFO: cleanup of uart_tx.v skipped,unknown,synthetic,unknown-8,template-generated variant
+S0150,INFO: cleanup of counter.v skipped,unknown,synthetic,unknown-8,template-generated variant
+S0151,INFO: cleanup of tb.v skipped,unknown,synthetic,unknown-8,template-generated variant

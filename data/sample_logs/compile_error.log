@@ -1,0 +1,4 @@
+INFO: compiling examples/compile_error
+examples/compile_error/tb.v:5: syntax error
+examples/compile_error/tb.v:5: error: Malformed statement
+ERROR: compilation failed

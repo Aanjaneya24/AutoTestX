@@ -1,0 +1,24 @@
+# Virtual environments & dependencies
+.venv/
+venv/
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Runtime and local runs
+.run/
+reports/runs/*
+!reports/runs/.gitkeep
+
+# ML outputs & caches
+models/*.joblib
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db

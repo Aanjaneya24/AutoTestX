@@ -1,0 +1,6 @@
+SCENARIO counter OK checked 1205 bytes
+SCENARIO counter_reset OK checked 838 bytes
+SCENARIO counter_fail OK checked 699 bytes
+SCENARIO compile_error OK checked 193 bytes
+SCENARIO hang OK checked 254 bytes
+SUMMARY ok=5 bad=0

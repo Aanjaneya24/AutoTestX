@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AutoTestX report 20261009-154009-46ad</title><style>
+body{font-family:system-ui,sans-serif;margin:2rem;color:#1b1f24;background:#fff}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #d0d7de;padding:.4rem .6rem;text-align:left;font-size:.9rem;vertical-align:top}
+th{background:#f6f8fa}
+.PASS{color:#1a7f37;font-weight:600}.FAIL,.ERROR{color:#cf222e;font-weight:600}.TIMEOUT{color:#9a6700;font-weight:600}
+.unexpected{background:#fff8c5}
+code,pre{font-family:ui-monospace,monospace;font-size:.85rem}
+pre{background:#f6f8fa;padding:.5rem;overflow:auto;max-height:12rem}
+.note{color:#57606a;font-size:.85rem}
+@media (prefers-color-scheme:dark){body{background:#0d1117;color:#e6edf3}th{background:#161b22}
+th,td{border-color:#30363d}pre{background:#161b22}.PASS{color:#3fb950}.FAIL,.ERROR{color:#ff7b72}
+.TIMEOUT{color:#d29922}.unexpected{background:#3b2f00}.note{color:#8b949e}}
+</style></head><body>
+<h1>AutoTestX &mdash; autotestx-demo</h1>
+<p class="note">Run <code>20261009-154009-46ad</code> &middot; started 2026-10-09T10:10:09+00:00 &middot; simulator iverilog</p>
+<p><strong>6</strong> tests: <span class="PASS">3 passed</span>,
+<span class="FAIL">2 failed</span>, <span class="ERROR">0 errored</span>,
+<span class="TIMEOUT">1 timed out</span> &middot; 0 differ from expectation
+(highlighted).</p>
+<table><thead><tr><th>Test</th><th>Status</th><th>Expected</th><th>Exit</th><th>Duration</th><th>Log</th>
+<th>Rule-based findings (deterministic)</th><th>ML prediction (experimental)</th></tr></thead>
+<tbody><tr><td>counter_basic<br><span class='note'>Check basic counter behavior</span></td><td class='PASS'>PASS</td><td>PASS</td><td>0</td><td>0.04s</td><td><a href='logs/counter_basic.log'>logs/counter_basic.log</a><br><span class='note'>exit 0 and no failure markers in log</span></td><td><code>-</code><ul><li class='note'>none</li></ul></td><td><span class='note'>n/a</span></td></tr><tr><td>counter_reset<br><span class='note'>Check reset behavior</span></td><td class='PASS'>PASS</td><td>PASS</td><td>0</td><td>0.04s</td><td><a href='logs/counter_reset.log'>logs/counter_reset.log</a><br><span class='note'>exit 0 and no failure markers in log</span></td><td><code>-</code><ul><li class='note'>none</li></ul></td><td><span class='note'>n/a</span></td></tr><tr><td>tcl_scenario_lint<br><span class='note'>Tcl check that every testbench can report PASS and failure markers</span></td><td class='PASS'>PASS</td><td>PASS</td><td>0</td><td>0.02s</td><td><a href='logs/tcl_scenario_lint.log'>logs/tcl_scenario_lint.log</a><br><span class='note'>exit 0 and no failure markers in log</span></td><td><code>-</code><ul><li class='note'>none</li></ul></td><td><span class='note'>n/a</span></td></tr><tr><td>counter_fail_intentional<br><span class='note'>Deliberately wrong expectation, must be recorded as FAIL (assertion)</span></td><td class='FAIL'>FAIL</td><td>FAIL</td><td>1</td><td>0.04s</td><td><a href='logs/counter_fail_intentional.log'>logs/counter_fail_intentional.log</a><br><span class='note'>non-zero exit code 1</span></td><td><code>assertion_failure</code><ul><li><code>ASSERT</code> line 3: ASSERT FAIL: expected count 9, got 3 at time 46000</li><li><code>FAIL</code> line 4: FAIL: tb_counter_fail (intentional)</li><li><code>ASSERT</code> line 5: FATAL: examples/counter_fail/tb.v:15: intentional assertion failure</li></ul></td><td><code>assertion_failure</code> (confidence 0.92)</td></tr><tr><td>compile_error_intentional<br><span class='note'>Deliberately broken testbench, must be recorded as FAIL (compile error)</span></td><td class='FAIL'>FAIL</td><td>FAIL</td><td>2</td><td>0.02s</td><td><a href='logs/compile_error_intentional.log'>logs/compile_error_intentional.log</a><br><span class='note'>non-zero exit code 2</span></td><td><code>compile_error</code><ul><li><code>ERROR</code> line 2: examples/compile_error/tb.v:5: syntax error</li><li><code>ERROR</code> line 3: examples/compile_error/tb.v:5: error: Malformed statement</li><li><code>FAIL</code> line 4: ERROR: compilation failed</li></ul></td><td><code>compile_error</code> (confidence 0.97)</td></tr><tr><td>hang_intentional<br><span class='note'>Never-ending simulation, must be recorded as TIMEOUT</span></td><td class='TIMEOUT'>TIMEOUT</td><td>TIMEOUT</td><td>-</td><td>3.01s</td><td><a href='logs/hang_intentional.log'>logs/hang_intentional.log</a><br><span class='note'>exceeded timeout; process group killed</span></td><td><code>timeout</code><ul><li><code>TIMEOUT</code> line 5: AUTOTESTX: TIMEOUT after 3s; process group killed</li></ul></td><td><code>timeout</code> (confidence 0.93)</td></tr></tbody></table>
+<p class="note">Status comes only from exit code, timeout and explicit log markers. ML predictions are
+text-pattern guesses over the failure log, not verified root causes, and never change a status.</p>
+<h2>Environment</h2><ul><li><code>bash</code>: /bin/bash <span class='note'>GNU bash, version 3.2.57(1)-release (arm64-apple-darwin26)</span></li><li><code>simulator</code>: /opt/homebrew/bin/iverilog <span class='note'>Icarus Verilog version 13.0 (stable) (v13_0)</span></li><li><code>runtime</code>: /opt/homebrew/bin/vvp <span class='note'>Icarus Verilog runtime version 13.0 (stable) (v13_0)</span></li><li><code>python</code>: /opt/anaconda3/bin/python3 <span class='note'>Python 3.11.7</span></li><li><code>perl</code>: /usr/bin/perl <span class='note'>perl v5.34.1</span></li><li><code>tclsh</code>: /opt/anaconda3/bin/tclsh <span class='note'>tcl 8.6.12</span></li><li><code>scikit-learn</code>: python-module <span class='note'>1.2.2</span></li></ul>
+<p class="note">macOS-27.0.1-arm64-arm-64bit &middot; Python 3.11.7
+ &middot; AutoTestX 0.1.0</p>
+</body></html>

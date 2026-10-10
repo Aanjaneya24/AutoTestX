@@ -1,0 +1,4 @@
+INFO: compiling examples/counter
+INFO: running simulation
+PASS: tb_counter completed with 0 errors
+examples/counter/tb.v:32: $finish called at 176000 (1ps)

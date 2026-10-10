@@ -1,0 +1,6 @@
+INFO: compiling examples/fifo
+INFO: running simulation
+push 1
+push 2
+FATAL: fifo.v:88: index out of bounds
+       Time: 5400000  Scope: tb.dut

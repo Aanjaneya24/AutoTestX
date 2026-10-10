@@ -1,0 +1,58 @@
+# Demo suite. Tests marked `expect: fail|timeout` are DELIBERATE failures that show how the
+# framework records them; the run exits 0 only when every test matches its expectation.
+project:
+  name: autotestx-demo
+  simulator: iverilog
+
+settings:
+  output_dir: reports/runs
+  default_timeout_seconds: 30
+  enable_ml_classification: true
+  ml_model_path: models/log_classifier.joblib
+
+tools:
+  simulator: iverilog
+  runtime: vvp
+  python: python3
+  perl: perl
+  tclsh: tclsh
+
+tests:
+  - name: counter_basic
+    description: Check basic counter behavior
+    command: [bash, scripts/run_simulation.sh, examples/counter]
+    timeout_seconds: 30
+    tags: [smoke, rtl]
+
+  - name: counter_reset
+    description: Check reset behavior
+    command: [bash, scripts/run_simulation.sh, examples/counter_reset]
+    timeout_seconds: 30
+    tags: [reset, rtl]
+
+  - name: tcl_scenario_lint
+    description: Tcl lint, every testbench must be able to report PASS and failure (comments do not count)
+    command: [tclsh, tcl/demo_tests.tcl, examples, counter, counter_reset, counter_fail, "compile_error:no-pass,no-fail", "hang:no-pass,no-fail"]
+    timeout_seconds: 15
+    tags: [tcl, flow]
+
+  - name: counter_fail_intentional
+    description: Deliberately wrong expectation, must be recorded as FAIL (assertion)
+    command: [bash, scripts/run_simulation.sh, examples/counter_fail]
+    timeout_seconds: 30
+    tags: [negative, rtl]
+    expect: fail
+
+  - name: compile_error_intentional
+    description: Deliberately broken testbench, must be recorded as FAIL (compile error)
+    command: [bash, scripts/run_simulation.sh, examples/compile_error]
+    timeout_seconds: 30
+    tags: [negative, rtl]
+    expect: fail
+
+  - name: hang_intentional
+    description: Never-ending simulation, must be recorded as TIMEOUT
+    command: [bash, scripts/run_simulation.sh, examples/hang]
+    timeout_seconds: 3
+    tags: [negative, rtl]
+    expect: timeout

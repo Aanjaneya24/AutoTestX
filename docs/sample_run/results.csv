@@ -1,0 +1,7 @@
+run_id,name,status,expected_status,matches_expectation,exit_code,duration_seconds,start_time,rule_category,ml_label,ml_confidence,log_path,status_reason
+20261009-154009-46ad,counter_basic,PASS,PASS,True,0,0.042,2026-10-09T10:10:09+00:00,,,,./logs/counter_basic.log,exit 0 and no failure markers in log
+20261009-154009-46ad,counter_reset,PASS,PASS,True,0,0.041,2026-10-09T10:10:09+00:00,,,,./logs/counter_reset.log,exit 0 and no failure markers in log
+20261009-154009-46ad,tcl_scenario_lint,PASS,PASS,True,0,0.021,2026-10-09T10:10:09+00:00,,,,./logs/tcl_scenario_lint.log,exit 0 and no failure markers in log
+20261009-154009-46ad,counter_fail_intentional,FAIL,FAIL,True,1,0.041,2026-10-09T10:10:09+00:00,assertion_failure,assertion_failure,0.9156,./logs/counter_fail_intentional.log,non-zero exit code 1
+20261009-154009-46ad,compile_error_intentional,FAIL,FAIL,True,2,0.021,2026-10-09T10:10:09+00:00,compile_error,compile_error,0.9675,./logs/compile_error_intentional.log,non-zero exit code 2
+20261009-154009-46ad,hang_intentional,TIMEOUT,TIMEOUT,True,,3.006,2026-10-09T10:10:09+00:00,timeout,timeout,0.927,./logs/hang_intentional.log,exceeded timeout; process group killed

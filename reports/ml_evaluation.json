@@ -1,0 +1,303 @@
+{
+  "dataset": "data/labeled_log_snippets.csv",
+  "n_samples": 151,
+  "class_counts": {
+    "compile_error": 29,
+    "assertion_failure": 32,
+    "timeout": 32,
+    "runtime_error": 29,
+    "unknown": 29
+  },
+  "n_families": 40,
+  "source_types": [
+    "synthetic"
+  ],
+  "protocol": "StratifiedGroupKFold(n_splits=4, shuffle=True, random_state=42), grouped by family_id; metrics on pooled out-of-fold predictions",
+  "folds": [
+    {
+      "train": 114,
+      "test": 37,
+      "test_families": [
+        "assertion_failure-1",
+        "assertion_failure-3",
+        "compile_error-3",
+        "compile_error-5",
+        "runtime_error-2",
+        "runtime_error-4",
+        "timeout-1",
+        "timeout-3",
+        "unknown-4",
+        "unknown-8"
+      ]
+    },
+    {
+      "train": 114,
+      "test": 37,
+      "test_families": [
+        "assertion_failure-4",
+        "assertion_failure-7",
+        "compile_error-6",
+        "compile_error-7",
+        "runtime_error-1",
+        "runtime_error-7",
+        "timeout-4",
+        "timeout-7",
+        "unknown-3",
+        "unknown-5"
+      ]
+    },
+    {
+      "train": 111,
+      "test": 40,
+      "test_families": [
+        "assertion_failure-6",
+        "assertion_failure-8",
+        "compile_error-1",
+        "compile_error-8",
+        "runtime_error-3",
+        "runtime_error-6",
+        "timeout-2",
+        "timeout-5",
+        "unknown-1",
+        "unknown-2"
+      ]
+    },
+    {
+      "train": 114,
+      "test": 37,
+      "test_families": [
+        "assertion_failure-2",
+        "assertion_failure-5",
+        "compile_error-2",
+        "compile_error-4",
+        "runtime_error-5",
+        "runtime_error-8",
+        "timeout-6",
+        "timeout-8",
+        "unknown-6",
+        "unknown-7"
+      ]
+    }
+  ],
+  "labels": [
+    "compile_error",
+    "assertion_failure",
+    "timeout",
+    "runtime_error",
+    "unknown"
+  ],
+  "rule_baseline": {
+    "accuracy": 0.7351,
+    "macro_f1": 0.7523,
+    "per_class": {
+      "compile_error": {
+        "precision": 1.0,
+        "recall": 0.862,
+        "f1": 0.926,
+        "support": 29
+      },
+      "assertion_failure": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.769,
+        "support": 32
+      },
+      "timeout": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.769,
+        "support": 32
+      },
+      "runtime_error": {
+        "precision": 0.81,
+        "recall": 0.586,
+        "f1": 0.68,
+        "support": 29
+      },
+      "unknown": {
+        "precision": 0.446,
+        "recall": 1.0,
+        "f1": 0.617,
+        "support": 29
+      }
+    },
+    "confusion_matrix": [
+      [
+        25,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        20,
+        0,
+        4,
+        8
+      ],
+      [
+        0,
+        0,
+        20,
+        0,
+        12
+      ],
+      [
+        0,
+        0,
+        0,
+        17,
+        12
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        29
+      ]
+    ]
+  },
+  "ml_model": {
+    "accuracy": 0.5099,
+    "macro_f1": 0.4993,
+    "per_class": {
+      "compile_error": {
+        "precision": 1.0,
+        "recall": 0.828,
+        "f1": 0.906,
+        "support": 29
+      },
+      "assertion_failure": {
+        "precision": 0.465,
+        "recall": 0.625,
+        "f1": 0.533,
+        "support": 32
+      },
+      "timeout": {
+        "precision": 0.425,
+        "recall": 0.531,
+        "f1": 0.472,
+        "support": 32
+      },
+      "runtime_error": {
+        "precision": 0.343,
+        "recall": 0.414,
+        "f1": 0.375,
+        "support": 29
+      },
+      "unknown": {
+        "precision": 0.444,
+        "recall": 0.138,
+        "f1": 0.211,
+        "support": 29
+      }
+    },
+    "confusion_matrix": [
+      [
+        24,
+        1,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        20,
+        8,
+        4,
+        0
+      ],
+      [
+        0,
+        8,
+        17,
+        7,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        12,
+        5
+      ],
+      [
+        0,
+        8,
+        9,
+        8,
+        4
+      ]
+    ]
+  },
+  "rule_misclassified_examples": [
+    {
+      "text": "elaboration aborted: design unit 'uart_rx' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "unknown"
+    },
+    {
+      "text": "elaboration aborted: design unit 'counter' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "unknown"
+    },
+    {
+      "text": "elaboration aborted: design unit 'arbiter' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "unknown"
+    },
+    {
+      "text": "elaboration aborted: design unit 'alu' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "unknown"
+    },
+    {
+      "text": "UVM_ERROR @ 328521: reporter [CHK] output addr did not match reference model value 1720",
+      "true": "assertion_failure",
+      "predicted": "unknown"
+    },
+    {
+      "text": "UVM_ERROR @ 387718: reporter [CHK] output ready did not match reference model value 2308",
+      "true": "assertion_failure",
+      "predicted": "unknown"
+    }
+  ],
+  "ml_misclassified_examples": [
+    {
+      "text": "ERROR: compilation failed\nI give up.",
+      "true": "compile_error",
+      "predicted": "assertion_failure"
+    },
+    {
+      "text": "elaboration aborted: design unit 'uart_rx' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "runtime_error"
+    },
+    {
+      "text": "elaboration aborted: design unit 'counter' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "runtime_error"
+    },
+    {
+      "text": "elaboration aborted: design unit 'arbiter' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "runtime_error"
+    },
+    {
+      "text": "elaboration aborted: design unit 'alu' could not be resolved in library work",
+      "true": "compile_error",
+      "predicted": "runtime_error"
+    },
+    {
+      "text": "ASSERT FAIL: expected 2976, got 4716 at time 401162",
+      "true": "assertion_failure",
+      "predicted": "runtime_error"
+    }
+  ],
+  "inference_ms_per_sample": 0.188,
+  "inference_sample_size": 50,
+  "sklearn_version": "1.9.1",
+  "evaluated_at": "2026-10-10T15:14:24+00:00"
+}
